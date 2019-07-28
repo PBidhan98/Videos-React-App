@@ -1,8 +1,13 @@
 import React from 'react';
 
 //functional Component
-const VideoItem = (props) => {
-  return <div>video Item</div>;
+const VideoItem = ({video}) => {
+  return (
+    <div>
+      <img src={video.snippet.thumbnails.medium.url} />
+      {video.snippet.title}
+    </div>
+  );
 };
 
 export default VideoItem;
